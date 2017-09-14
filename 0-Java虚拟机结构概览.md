@@ -37,7 +37,10 @@ NULL：当一个引用不指向任何对象的时候，它的值用null来表示
  如果该当前方法（current method）是native的，即该方法是调用的非Java代码的接口，那么pc寄存器的值是undefined。    
  如果方法不是native的，即调用的是Java方法，那么px寄存器的值是正在执行的字节码指令的地址。    
 关于Java的native method 可以参考：https://stackoverflow.com/questions/6101311/what-is-the-native-keyword-in-java-for
- 2.
+ 2.JVM栈
+ 虚拟机中的栈主要是用来存储栈帧及局部变量、临时计算结果。
+ 如果线程请求分配的栈容量超过JVM允许的最大栈容量，那么会抛出StackOverFlowError异常；如果创建新线程时没有足够的内存去创建对应的虚拟机栈，那么会抛出OOM的异常。
+ 
 
 
 
